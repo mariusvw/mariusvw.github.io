@@ -8,7 +8,7 @@
 .maskSpanJoinable {
   background-color: #cccccc;
   text-align: right;
-  cursor: hand;
+  cursor: pointer;
 }
 .maskSpanRotate {
   filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
