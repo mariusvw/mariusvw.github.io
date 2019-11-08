@@ -27,8 +27,10 @@ cwd=$(pwd)
 cd $root
 
 # Build pages
+echo "[+] Building pages..."
 pages=($(find $root/src/pages -maxdepth 1 -mindepth 1 -type f -name '*.sh' | awk -F'/' '{print $NF}' | sed 's/\.sh$//'))
 for page in "${pages[@]}"
 do
   . $root/src/main.sh > $root/$page.html
 done
+echo "[-] Done!"
