@@ -11,3 +11,5 @@ printf "$_menu" 'https://kitara.nl' 'Company Website'
 # printf "$_menu" 'https://mariusvw.com' 'Personal Blog'
 printf "$_menu" '/subnet.html' 'Subnet Calc'
 echo '</ul>'
+
+echo '<button id="theme">Darkmode</button>'

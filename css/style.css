@@ -1,5 +1,34 @@
+/*************/
+/* variables */
+/*************/
+
+/* root/default variables */
+:root {
+    --font-color: #000;
+    --link-color: rgb(79, 137, 245);
+    --bg-color: rgb(243,243,243);
+    --heart-color: #f65;
+    --table-head-color: #000;
+    --table-head-background-color: #ccc;
+    --table-cell-color: #000;
+    --table-cell-background-color: #fff;
+    --table-border-color: #000;
+}
+/* dark theme */
+[data-theme="dark"] {
+    --font-color: #eee;
+    --link-color: rgb(79, 137, 245);
+    --bg-color: #333;
+    --heart-color: #e87;
+    --table-head-color: #000;
+    --table-head-background-color: #ccc;
+    --table-cell-color: #000;
+    --table-cell-background-color: #fff;
+    --table-border-color: #666;
+}
+
 /***********/
-/* default */
+/* layout */
 /***********/
 
 html {
@@ -9,6 +38,9 @@ html {
 
 body {
   margin: 0;
+  color: var(--font-color);
+  background: var(--bg-color);
+  text-align: center;
 }
 
 body * {
@@ -18,6 +50,47 @@ body * {
 
 a {
   text-decoration: none;
+  color: var(--link-color);
+}
+
+hr {
+  margin: 16px 0px;
+}
+
+ul {
+  padding: 0px;
+}
+li {
+  line-height: 20px;
+  list-style: none;
+}
+
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  table-layout: fixed;
+
+}
+table, th, td {
+  border: 1px solid var(--table-border-color);
+}
+table tr td {
+  padding: 2px 5px;
+  color: var(--table-cell-color);
+  background-color: var(--table-cell-background-color);
+}
+table thead td {
+  font-weight: bold;
+  color: var(--table-head-color);
+  background-color: var(--table-head-background-color);
+}
+
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+#menu li {
+  display: inline;
 }
 
 /**********/
@@ -55,7 +128,7 @@ a.disabled {
 .heartbeat:after, .heartbeat:before {
   position: absolute;
   content: "";
-  background: #e87;
+  background: var(--heart-color);
 }
 
 .heartbeat:before {
@@ -96,52 +169,24 @@ a.disabled {
 
 /* END: heartbeat */
 
-/**********/
-/* layout */
-/**********/
+/****************/
+/* Display Mode */
+/****************/
 
-body {
-  margin: 10px;
-  text-align: center;
+/* Light mode */
+/*
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #eee;
+  }
 }
+*/
 
-a {
-  color: rgb(0, 0, 238);
+/* Dark mode */
+/*
+@media (prefers-color-scheme: dark) {
+  body {
+      background-color: #333;
+  }
 }
-
-hr {
-  margin: 16px 0px;
-}
-
-ul {
-  padding: 0px;
-}
-li {
-  line-height: 20px;
-  list-style: none;
-}
-
-table {
-  margin: 0 auto;
-  border-collapse: collapse;
-  table-layout: fixed;
-
-}
-table, th, td {
-  border: 1px solid black;
-}
-table td {
-  padding: 2px 5px;
-}
-table thead {
-  font-weight: bold;
-  background-color: #eeeeee;
-}
-
-input[type="checkbox"] {
-  margin-right: 5px;
-}
-
-#menu li {
-  display: inline;
-}
+*/
