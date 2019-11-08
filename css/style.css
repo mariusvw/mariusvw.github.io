@@ -137,3 +137,7 @@ table thead {
 input[type="checkbox"] {
   margin-right: 5px;
 }
+
+#menu li {
+  display: inline;
+}
