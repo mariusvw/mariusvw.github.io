@@ -4,10 +4,9 @@ EOF
 
 echo -n '<ul id="menu">'
 # printf "$_menu" 'https://mariusvw.github.io' 'View GitHub page'
-printf "$_menu" '/' 'View GitHub page'
-printf "$_menu" 'https://github.com/mariusvw' 'View GitHub profile'
+printf "$_menu" '/' 'Home'
+printf "$_menu" 'https://github.com/mariusvw' 'GitHub profile'
 printf "$_menu" 'https://kitara.nl' 'Company Website'
-printf "$_menu" 'https://mariusvw.com' 'Personal Blog'
-# printf "$_menu" 'https://mariusvw.github.io/subnet.html' 'Subnet Calc'
+# printf "$_menu" 'https://mariusvw.com' 'Personal Blog'
 printf "$_menu" '/subnet.html' 'Subnet Calc'
 echo '</ul>'
