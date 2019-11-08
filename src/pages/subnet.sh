@@ -6,11 +6,13 @@ cat <<EOF
 <form name="calc" onsubmit="updateNetwork(); return false;">
 
 <table>
-  <tr>
-    <td class="label">Network Address</td>
-    <td class="label">Mask bits</td>
-    <td>&nbsp;</td>
-  </tr>
+  <thead>
+    <tr>
+      <td class="label">Network Address</td>
+      <td class="label">Mask bits</td>
+      <td>&nbsp;</td>
+    </tr>
+  </thead>
   <tr>
     <td><input type="text" name="network" size="15" maxlength="15" value="172.16.0.0"></td>
     <td>/<input type="text" name="netbits" size="2" maxlength="2" value="12"></td>
@@ -53,18 +55,18 @@ cat <<EOF
         <td>Divide</td>
         <td id="joinHeader">Join</td>
     </tr>
-    </thead>
-    <tbody id="calcbody">
-      <tr>
-        <td>172.16.0.0/12</td>
-        <td>255.240.0.0</td>
-        <td>172.16.0.0 - 172.31.255.255</td>
-        <td>172.16.0.1 - 172.31.255.254</td>
-        <td>1048574</td>
-        <td><a href="#">Divide</a></td>
-        <td rowspan="1" colspan="1" class="maskSpan"><img src="img/subnet/12.gif"></td>
-      </tr>
-    </tbody>
+  </thead>
+  <tbody id="calcbody">
+    <tr>
+      <td>172.16.0.0/12</td>
+      <td>255.240.0.0</td>
+      <td>172.16.0.0 - 172.31.255.255</td>
+      <td>172.16.0.1 - 172.31.255.254</td>
+      <td>1048574</td>
+      <td><a href="#">Divide</a></td>
+      <td rowspan="1" colspan="1" class="maskSpan"><img src="img/subnet/12.gif"></td>
+    </tr>
+  </tbody>
 </table>
 
 EOF
