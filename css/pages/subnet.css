@@ -1,0 +1,16 @@
+.disabledAction {
+  color: #dddddd;
+}
+.maskSpan {
+  background-color: #cccccc;
+  text-align: right;
+}
+.maskSpanJoinable {
+  background-color: #cccccc;
+  text-align: right;
+  cursor: hand;
+}
+.maskSpanRotate {
+  filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  background-color:green;
+}
