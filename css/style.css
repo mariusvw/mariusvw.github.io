@@ -105,6 +105,10 @@ body {
   text-align: center;
 }
 
+a {
+  color: rgb(0, 0, 238);
+}
+
 hr {
   margin: 16px 0px;
 }
