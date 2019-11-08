@@ -22,10 +22,8 @@ cat <<EOF
     <title>mariusvw.github.io by Marius van Witzenburg :-)</title>
   </head>
   <body>
-    <header>
+    <nav>
       <div class="container">
-        <h1>mariusvw.github.io</h1>
-        <h2></h2>
         <section id="links">
 EOF
 
@@ -34,7 +32,7 @@ EOF
 cat <<EOF
         </section>
       </div>
-    </header>
+    </nav>
     <hr />
     <div class="container">
       <section id="main_content">
