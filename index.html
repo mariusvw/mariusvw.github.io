@@ -64,7 +64,21 @@
     <div class="play-btn"></div>
   </div>
   <script>
-  const v = document.getElementById("player");
+  const v = document.getElementById("v");
+  const o = document.getElementById("overlay");
+
+  o.addEventListener("click", () => {
+    v.play();
+    o.classList.add("hidden");
+  });
+
+  v.addEventListener("pause", () => {
+    if (!v.ended) o.classList.remove("hidden");
+  });
+
+  v.addEventListener("play", () => {
+    o.classList.add("hidden");
+  });
 
   // optional helpers
   v.addEventListener("error", () => {
