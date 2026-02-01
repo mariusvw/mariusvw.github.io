@@ -20,6 +20,37 @@
       max-height: 100%;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.7); /* Optional: subtle glow */
     }
+    .overlay {
+      position:absolute;
+      inset:0;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      cursor:pointer;
+      background:rgba(0,0,0,.35);
+    }
+  
+    .play-btn {
+      width:90px;
+      height:90px;
+      border-radius:50%;
+      background:rgba(255,255,255,.9);
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+  
+    .play-btn:before {
+      content:"";
+      margin-left:6px;
+      border-style:solid;
+      border-width:18px 0 18px 30px;
+      border-color:transparent transparent transparent #000;
+    }
+  
+    .overlay.hidden {
+      display:none;
+    }
   </style>
 </head>
 <body>
@@ -29,6 +60,9 @@
     <source src="https://github.com/mariusvw/mariusvw.github.io/blob/main/World in waves.mp4?raw=true" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
+  <div id="overlay" class="overlay">
+    <div class="play-btn"></div>
+  </div>
   <script>
   const v = document.getElementById("player");
 
