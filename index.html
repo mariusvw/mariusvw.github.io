@@ -76,7 +76,8 @@
   const o = document.getElementById("overlay");
 
   o.addEventListener("click", async () => {
-    v.style.display = "block";   // reveal player
+    v.style.opacity = "1";          // show instantly
+    v.style.pointerEvents = "auto";
     o.classList.add("hidden");
     await v.play();
   });
