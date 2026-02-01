@@ -14,7 +14,6 @@
       justify-content: center;
       align-items: center;
     }
-
     .player-wrap {
       position:relative;
       width:100%;
@@ -72,17 +71,14 @@
   const v = document.getElementById("v");
   const o = document.getElementById("overlay");
 
-  o.addEventListener("click", () => {
-    v.play();
+  o.addEventListener("click", async () => {
+    v.style.display = "block";   // reveal player
     o.classList.add("hidden");
+    await v.play();
   });
 
   v.addEventListener("pause", () => {
     if (!v.ended) o.classList.remove("hidden");
-  });
-
-  v.addEventListener("play", () => {
-    o.classList.add("hidden");
   });
 
   // optional helpers
