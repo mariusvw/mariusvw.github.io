@@ -22,7 +22,8 @@
     video {
       max-width: 100%;
       max-height: 100%;
-      display:none;   /* hidden initially */
+      opacity:0;              /* invisible but loading */
+      pointer-events:none;   /* no interaction yet */
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.7); /* Optional: subtle glow */
     }
     .overlay {
